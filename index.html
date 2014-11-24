@@ -7,10 +7,13 @@
 		<link rel="import" href="bower_components/polymer/polymer.html">
 		<link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
 		<link rel="import" href="bower_components/core-toolbar">
+		<link rel="import" href="bower_components/core-icon-button">
 	</head>
 	<body fullbleed layout vertical>
-		<core-header-panel flex>
-			<core-toolbar>
+		<core-header-panel mode="standard" id="core_header_panel">
+			<core-toolbar id="core_toolbar">
+				<core-icon-button icon="menu" id="core_icon_button">
+				</core-icon-button>
 				<div>Poop</div>
 			</core-toolbar>
 		</core-header-panel>
