@@ -6,15 +6,29 @@
 		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="mainstyle.css">
 		<link rel="import" href="bower_components/font-roboto/roboto.html">
-		<link rel="import" href="bower_components/core-head-panel/core-header-panel.html">
+		<link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
 		<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+		<link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
 
 	</head>
-	<body unresolved>
-		<core-header-panel>
+	<body fullbleed vertical layout>
+		<core-header-panel flex mode="standard">
 			<core-toolbar>
+
+				<paper-tabs id="tabs" selected="all" self-end>
+					<paper-tab name="test">Test</paper-tab>
+				</paper-tabs>
+
 			</core-toolbar>
 			<!-- main page content here -->
+			<div>Words</div>
 		</core-header-panel>
+		<script>
+			var tabs = document.querySelector('paper-tabs');
+
+			tabs.addEventListener('core-select', function(){
+				console.log("Selected: " + tabs.selected);
+			});
+		</script>
 	</body>
 </html>
