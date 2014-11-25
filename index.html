@@ -8,21 +8,28 @@
 		<link rel="import" href="bower_components/font-roboto/roboto.html">
 		<link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
 		<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+		<link rel="import" href="bower_components/core-pages/core-pages.html">
 		<link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
-
+		<link rel="import" href="elements/post-card.html"
 	</head>
-	<body fullbleed vertical layout>
+	<body unresolved fullbleed vertical layout>
 		<core-header-panel flex mode="standard">
 			<core-toolbar>
 
-				<paper-tabs id="tabs" selected="all" self-end>
+				<paper-tabs id="tabs" selected="0" self-end link>
 					<paper-tab name="test">About Me</paper-tab>
 					<paper-tab name="education">Education</paper-tab>
 				</paper-tabs>
-
+				<!--
+				<core-pages selected="{{selected}}">
+ 					<div>Page 1</div>
+  					<div>Page 2</div>
+  					<div>Page 3</div>
+				</core-pages>
+				-->
 			</core-toolbar>
+
 			<!-- main page content here -->
-			<div>Words</div>
 		</core-header-panel>
 		<script>
 			var tabs = document.querySelector('paper-tabs');

@@ -1,5 +1,5 @@
 html, body {
-	background-color: #d0effe;
+	background-color: #E3E3E3;
 	font-family: 'RobotoDraft', sans-serif;
 	margin: 0;
 	height: 100%;
@@ -7,12 +7,29 @@ html, body {
 core-header-panel {
 	height: 100%;
 	overflow: auto;
-	background: #44FFDD;
 	-webkit-overflow-scrolling: touch;
 }
 core-toolbar {
-	background: #03ddff;
+	background: #3ABDE8;
 	color: white;
+}
+paper-tabs::shadow #selectionBar {
+  background-color: #E3DC14;
+}
+paper-tabs paper-tab::shadow #ink {
+  color: #E3DC14;
+}
+polyfill-next-selector { content: '.card-header h2'; }
+.card-header ::content h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+polyfill-next-selector { content: '.card-header img'; }
+.card-header ::content img {
+  width: 70px;
+  border-radius: 50%;
+  margin: 10px;
 }
 #tabs {
   width: 100%;
