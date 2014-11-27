@@ -10,7 +10,7 @@ core-header-panel {
 	-webkit-overflow-scrolling: touch;
 }
 core-toolbar {
-	background: #3ABDE8;
+	background: #303F9F;
 	color: white;
 }
 paper-tabs::shadow #selectionBar {
