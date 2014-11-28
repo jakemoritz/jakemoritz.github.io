@@ -20,7 +20,7 @@
 		<core-header-panel flex mode="standard">
 			<core-toolbar class="tall">
 
-				<pin-head></pin-head>
+				<pin-head id="pin-head"></pin-head>
 
 				<paper-tabs id="tabs" selected="0" self-end class="bottom">
 					<paper-tab id="about">About Me</paper-tab>
@@ -40,13 +40,14 @@
 			</core-animated-pages>
 
 		</core-header-panel>
+
+		<!-- handles clicking tabs -->
 		<script>
 			var tabs = document.querySelector('paper-tabs');
 			var pages = document.querySelector('core-animated-pages');
 
 			tabs.addEventListener('core-select', function(){
 				pages.selected = tabs.selected;
-				console.log("Selected: " + tabs.selected);
 			});
 		</script>
 	</body>

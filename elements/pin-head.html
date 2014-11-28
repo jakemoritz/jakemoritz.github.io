@@ -7,20 +7,33 @@
 		<style>
 			#circle {
 				background-color: yellow;
-				width: 70px;
+				width: 100px;
 				border-radius: 100%;
-				margin: 0px;
-				height: 70px;
-				float: right;
+				height: 100px;
+				float: left;
 			}
 			#name {
 				font-family: 'RobotoDraft', sans-serif;
+				float: right;
+				left: -50px;
+				position: relative;
+			}
+			#container {
+				width: 400px;
+				height: 150px;
+				margin-top: 120px;
+				position: relative;
+				/*overflow: hidden;*/
 			}
 		</style>
-		<div id="circle"></div>
-		<h2 id="name">Jake</h2>
+		<div id="container">
+			<div id="circle"></div>
+			<h1 id="name">Jake Moritz</h1>
+		</div>
 	</template>
+
+	<!-- registers element as Polymer -->
 	<script>
-	Polymer({});
+		Polymer({});
 	</script>
 </polymer-element>
