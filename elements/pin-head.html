@@ -5,13 +5,17 @@
 <polymer-element name="pin-head">
 	<template>
 		<style>
-			#circle {
-				background-color: yellow;
-				width: 100px;
+			#outer {
+				background-color: black;
+				width: 95px;
+				height: 95px;
 				border-radius: 100%;
-				height: 100px;
+				border-style: solid;
+				border-width: 3px;
+				border-color: yellow;
 				float: left;
 			}
+
 			#name {
 				font-family: 'RobotoDraft', sans-serif;
 				float: right;
@@ -27,7 +31,7 @@
 			}
 		</style>
 		<div id="container">
-			<div id="circle"></div>
+			<div id="outer"></div>
 			<h1 id="name">Jake Moritz</h1>
 		</div>
 	</template>
