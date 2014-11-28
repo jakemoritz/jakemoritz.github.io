@@ -17,6 +17,7 @@
 		<link rel="import" href="elements/about-me.html">
 		<link rel="import" href="elements/projects.html">
 		<link rel="import" href="elements/resume.html">
+		<link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
 	</head>
 	<body unresolved fullbleed vertical layout>
 		<core-header-panel flex mode="standard">
@@ -34,7 +35,7 @@
 			</core-toolbar>
 
 			<!-- main page content here -->
-			<core-animated-pages selected="{{$.tabs.selected}}" transitions="cascade-from-all">
+			<core-animated-pages selected="{{$.tabs.selected}}" transitions="slide-from-right">
 				<about-me></about-me>
 				<projects-card></projects-card>
 				<education-card></education-card>
