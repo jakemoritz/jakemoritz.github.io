@@ -1,19 +1,32 @@
-<link rel="import" 
-  href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/polymer/polymer.html">
 
 <polymer-element name="projects-card">
-  	<template>
-  		<style>
-	    	.projects{
-	    		background-color: #ba99dd;
-	    	}
-	    </style>
 
-	    <div class="projects" layout horizontal center>
-	    	<h2>Projects</h2>
-	    </div>
-	</template>
-	<script>
-		Polymer({});
-	</script>
+  <template>
+    <style>
+      :host {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      #core_card {
+        width: 100%;
+        height: 300px;
+        border-radius: 2px;
+        box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
+        background-color: rgb(128, 64, 64);
+      }
+    </style>
+    <core-card id="core_card" layout vertical></core-card>
+  </template>
+
+  <script>
+
+    Polymer({
+
+    });
+
+  </script>
+
 </polymer-element>
