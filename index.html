@@ -3,56 +3,26 @@
 	<head>
 		<title>Jake Moritz</title>
 
-		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="mainstyle.css">
-		<link rel="shortcut icon" href="images/icon.ico">
-		<link rel="import" href="bower_components/font-roboto/roboto.html">
-		<link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
-		<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
-		<link rel="import" href="bower_components/core-pages/core-pages.html">
-		<link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
-		<link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+        <!--<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+        
+        <!-- core polymer import -->
 		<link rel="import" href="bower_components/polymer/polymer.html">
-		<link rel="import" href="elements/education.html">
-		<link rel="import" href="elements/pin-head.html">
-		<link rel="import" href="elements/about-me.html">
-		<link rel="import" href="elements/projects.html">
-		<link rel="import" href="elements/resume.html">
-		<link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
-	</head>
-	<body unresolved fullbleed vertical layout>
-		<core-header-panel flex mode="standard">
-			<core-toolbar class="tall">
-
-				<pin-head id="pin-head"></pin-head>
-
-				<paper-tabs id="tabs" selected="1" self-end class="bottom">
-					<paper-tab id="about">About Me</paper-tab>
-					<paper-tab id="projects">Projects</paper-tab>
-					<paper-tab id="education">Education</paper-tab>
-					<paper-tab id="resume">Resume</paper-tab>
-				</paper-tabs>
-
-			</core-toolbar>
-
-			<!-- main page content here -->
-			<core-animated-pages selected="{{$.tabs.selected}}" transitions="slide-from-right">
-				<about-me></about-me>
-				<projects-card></projects-card>
-				<education-card></education-card>
-				<resume-card></resume-card>
-			</core-animated-pages>
-
-		</core-header-panel>
-
-		<!-- handles clicking tabs -->
-		<script>
-			var tabs = document.querySelector('paper-tabs');
-			var pages = document.querySelector('core-animated-pages');
-
-			tabs.addEventListener('core-select', function(){
-				pages.selected = tabs.selected;
-			});
-		</script>
-	</body>
+        
+        <!-- polymer element imports -->
+        <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+        <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+        <link rel="import" href="bower_components/font-roboto/roboto.html">
+        <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+        <link rel="import" href="bower_components/paper-styles/paper-styles.html">
+        <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+        
+    </head>
+<body class="fullbleed layout vertical">
+  <paper-header-panel class="flex">
+    <paper-toolbar>
+      <div>Hello World!</div>
+    </paper-toolbar>
+  </paper-header-panel>
+</body>
 </html>
