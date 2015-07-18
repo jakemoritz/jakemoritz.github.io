@@ -6,10 +6,15 @@
         <!-- include webcomponent for polyfill -->
         <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
         
+        <!-- import style and favicon -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
         
         <!-- core polymer import -->
 		<link rel="import" href="bower_components/polymer/polymer.html">
+        
+        <!-- custom element imports -->
+        <link rel="import" href="elements/paper-page.html">
         
         <!-- font imports -->
         <link rel="import" href="bower_components/font-roboto/roboto.html">
@@ -22,6 +27,7 @@
         <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
         <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
         <link rel="import" href="bower_components/paper-menu/paper-menu.html">
+        <link rel="import" href="bower_components/paper-material/paper-material.html">
         
         <!-- iron element imports -->
         <link rel="import" href="bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html">
@@ -35,44 +41,38 @@
         <link rel="import" href="bower_components/iron-pages/iron-pages.html">
         
     </head>
-<body class="fullbleed layout vertical">
-    <paper-drawer-panel>
-        <paper-header-panel drawer>
-            <paper-menu selected="0">
-                <paper-item>
-                    <style>
-                        :host{
-                            --paper-item-min-height: 90px;
-                        }
-                    </style>
-                    <paper-item-body>
-                        <div>About Me</div>
-                    </paper-item-body>
-                </paper-item>
-                <paper-item>
-                    <paper-item-body>
-                        <div>Projects</div>
-                    </paper-item-body>
-                </paper-item>
-            </paper-menu>
-        </paper-header-panel>
-        <paper-header-panel main>
-            <paper-toolbar>
-                <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
-                <div>Jake Moritz</div>
-            </paper-toolbar>
-            <iron-pages selected="0">
-                <div>One</div>
-                <div>Two</div>
-            </iron-pages>
-        </paper-header-panel>
-    </paper-drawer-panel>
+    <body class="fullbleed layout vertical">
+        <paper-drawer-panel>
+            <paper-header-panel drawer id="drawer">
+                <paper-menu selected="0">
+                    <paper-item>
+  
+                            <div>About Me</div>
+                 
+                    </paper-item>
+                    <paper-item>
+                            <div>Projects</div>
+                    </paper-item>
+                </paper-menu>
+            </paper-header-panel>
+            <paper-header-panel main>
+                <paper-toolbar>
+                    <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                    <div id="name">Jake Moritz</div>
+                </paper-toolbar>
+                <iron-pages selected="0">
+                    <paper-page></paper-page>
+                    <div>Two</div>
+                </iron-pages>
+            </paper-header-panel>
+        </paper-drawer-panel>
 
-</body>
+    </body>
         <script>
-        document.addEventListener('click', function(e){
-            var pages = document.querySelector('iron-pages');
-            pages.selectNext();
-        });
-    </script>
+            document.addEventListener('click', function(e){
+                console.log("test");
+                var pages = document.querySelector('iron-pages');
+                pages.selectNext();
+            });
+        </script>
 </html>

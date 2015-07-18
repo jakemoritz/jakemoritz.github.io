@@ -1,0 +1,32 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="menu-item">
+    <template>
+        <paper-item>
+            <paper-item-body>
+                <div>{{itemName}}</div>
+            </paper-item-body>
+        </paper-item>
+    </template>
+
+    <script>
+        // register custom element
+        Polymer({
+            is: "menu-item",
+            
+            // properties
+            properties: {
+                itemName: String;
+            },
+            
+            // factory override
+            factoryImpl: function(itemName){
+                this.itemName = itemName;
+            },
+            
+            listeners: {
+                'click': 'onClick'
+            }
+        });
+    </script>
+</dom-module>
