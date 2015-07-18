@@ -8,6 +8,7 @@
         
         <!-- import style and favicon -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+        
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
         
         <!-- core polymer import -->
@@ -40,6 +41,12 @@
         <link rel="import" href="bower_components/iron-menu-behavior/iron-menubar-behavior.html">
         <link rel="import" href="bower_components/iron-pages/iron-pages.html">
         
+        <!-- custom css styles -->
+        <style is="custom-style">
+            paper-toolbar {
+                --paper-toolbar-background: #F44336;
+            }
+        </style>
     </head>
     <body class="fullbleed layout vertical">
         <paper-drawer-panel>
@@ -62,7 +69,7 @@
                 </paper-toolbar>
                 <iron-pages selected="0">
                     <paper-page></paper-page>
-                    <div>Two</div>
+                    <paper-page></paper-page>
                 </iron-pages>
             </paper-header-panel>
         </paper-drawer-panel>
