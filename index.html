@@ -44,7 +44,7 @@
     <body class="fullbleed layout vertical">
         <paper-drawer-panel>
             <paper-header-panel drawer id="drawer">
-                <paper-menu selected="0">
+                <paper-menu id="menu" selected="0">
                     <paper-item>
   
                             <div>About Me</div>
@@ -69,10 +69,9 @@
 
     </body>
         <script>
-            document.addEventListener('click', function(e){
-                console.log("test");
-                var pages = document.querySelector('iron-pages');
-                pages.selectNext();
+            var menu = document.querySelector("paper-menu");
+            menu.addEventListener("iron-select", function(e, details){
+                document.querySelector('iron-pages').select(menu.selected);
             });
         </script>
 </html>
