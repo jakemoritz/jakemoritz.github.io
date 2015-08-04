@@ -9,13 +9,15 @@
         <!-- import style and favicon -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
         
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<!--        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">-->
         
         <!-- core polymer import -->
 		<link rel="import" href="bower_components/polymer/polymer.html">
         
         <!-- custom element imports -->
         <link rel="import" href="elements/paper-page.html">
+        <link rel="import" href="elements/project-item.html">
+        <link rel="import" href="elements/projects-page.html">
         
         <!-- font imports -->
         <link rel="import" href="bower_components/font-roboto/roboto.html">
@@ -40,6 +42,7 @@
         <link rel="import" href="bower_components/iron-menu-behavior/iron-menu-behavior.html">
         <link rel="import" href="bower_components/iron-menu-behavior/iron-menubar-behavior.html">
         <link rel="import" href="bower_components/iron-pages/iron-pages.html">
+        <link rel="import" href="bower_components/iron-image/iron-image.html">
         
         <!-- custom css styles -->
         <style is="custom-style">
@@ -68,7 +71,7 @@
                 </paper-toolbar>
                 <iron-pages selected="0">
                     <div>Hi</div>
-                    <div>2</div>
+                    <projects-page></projects-page>
                 </iron-pages>
             </paper-header-panel>
         </paper-drawer-panel>
