@@ -13,6 +13,10 @@ html,
 body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
-.mdl-layout__tab-drawer-button {
-  display: none;
+.mdl-layout__header-row {
+  padding-left: 40px;
+  margin: 10px;
+}
+.mdl-layout__tab-bar {
+  padding-left: 40px;
 }
