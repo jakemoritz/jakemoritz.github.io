@@ -9,3 +9,10 @@
 .projects {
   margin-top: 20px;
 }
+html,
+body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+.mdl-layout__tab-drawer-button {
+  display: none;
+}
