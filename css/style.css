@@ -1,0 +1,11 @@
+.website-card.mdl-card {
+  width: 500px;
+  margin: auto;
+}
+.website-card > .mdl-card__title {
+  background: url('http://placehold.it/500x200') bottom;
+  height: 200px;
+}
+.projects {
+  margin-top: 20px;
+}
