@@ -6,8 +6,8 @@
   background: url('http://placehold.it/500x200') bottom;
   height: 200px;
 }
-.projects {
-  margin-top: 20px;
+.page-content {
+  margin-top: 40px;
 }
 html,
 body {
@@ -19,4 +19,30 @@ body {
 }
 .mdl-layout__tab-bar {
   padding-left: 40px;
+  height: 100%;
+}
+.about-me-card {
+  width: auto;
+  margin: 20px;
+}
+.headshot {
+  background: url('http://placehold.it/200x200') center / cover;
+  height: 200px;
+  width: 200px;
+  /*  margin: 20px;*/
+}
+.mdl-layout__content {
+  background-color: #FAFAFA;
+}
+.mdl-grid {
+  width: 100%;
+}
+.mdl-button {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  z-index: 100;
+}
+.mdl-layout__tab-bar-container {
+  overflow: visible;
 }
