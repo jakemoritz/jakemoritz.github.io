@@ -6,12 +6,19 @@
   <meta charset="UTF-8">
   <meta name="description" content="The showcase of projects worked on by Jake Moritz.">
 
+  <!-- MDL imports -->
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.1.1/material.teal-red.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
   <script src="https://storage.googleapis.com/code.getmdl.io/1.1.1/material.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+  <!-- jQuery imports -->
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <!-- CSS imports -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
 
 </head>
 
@@ -54,14 +61,8 @@
       </section>
       <section class="mdl-layout__tab-panel" id="scroll-tab-2">
         <div class="page-content projects">
-          <div class="mdl-card mdl-shadow--2dp website-card">
-            <div class="mdl-card__title">
-              <h2 class="mdl-card__title-text">This Website!</h2>
-            </div>
-            <div class="mdl-card__supporting-text">
-              This is my site that you're on right now!
-            </div>
-          </div>
+          <div id="projectCard"></div>
+          <div id="taskingCard"></div>
         </div>
       </section>
       <section class="mdl-layout__tab-panel" id="scroll-tab-3">
@@ -72,6 +73,14 @@
   </section>
   </main>
   </div>
+  <!-- Custom element imports -->
+  <script>
+    $(function() {
+      $("#projectCard").load("elements/project-card.html");
+      $("#taskingCard").load("elements/tasking-card.html");
+    });
+
+  </script>
 </body>
 
 </html>

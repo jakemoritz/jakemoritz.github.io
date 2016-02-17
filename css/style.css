@@ -1,10 +1,21 @@
 .website-card.mdl-card {
   width: 500px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-.website-card > .mdl-card__title {
+#projectCard > .mdl-card__title {
   background: url('http://placehold.it/500x200') bottom;
   height: 200px;
+}
+#taskingCard > .mdl-card__title {
+  background: url("../images/feature_graphic.png") bottom;
+  height: 250px;
+  background-size: 100% 100%;
+}
+#taskingCard > mdl-card__title-text {
+  display: none;
 }
 .page-content {
   margin-top: 40px;
@@ -37,7 +48,13 @@ body {
 .mdl-grid {
   width: 100%;
 }
-.mdl-button {
+.projectCard.mdl-button {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  z-index: 100;
+}
+.mdl-button--fab {
   position: absolute;
   right: 40px;
   top: 20px;
@@ -45,4 +62,15 @@ body {
 }
 .mdl-layout__tab-bar-container {
   overflow: visible;
+}
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
 }
