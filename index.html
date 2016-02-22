@@ -7,7 +7,7 @@
   <meta name="description" content="The showcase of projects worked on by Jake Moritz.">
 
   <!-- MDL imports -->
-  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.1.1/material.teal-red.min.css" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.red-amber.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
   <script src="https://storage.googleapis.com/code.getmdl.io/1.1.1/material.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -31,42 +31,34 @@
       </div>
       <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
 
-        <a href="#scroll-tab-1" class="mdl-layout__tab is-active">About Me</a>
-        <a href="#scroll-tab-2" class="mdl-layout__tab">Projects</a>
-        <a href="#scroll-tab-3" class="mdl-layout__tab">Resume</a>
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp">
+        <!--        <a href="#scroll-tab-1" class="mdl-layout__tab is-active">About Me</a>-->
+        <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Projects</a>
+        <a href="#scroll-tab-2" class="mdl-layout__tab">Resume</a>
+        <button id="emailFab" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp">
           <i class="material-icons">email</i>
         </button>
+        <div class="mdl-tooltip mdl-tooltip--large" for="emailFab">
+          Email
+        </div>
       </div>
     </header>
     <main class="mdl-layout__content">
+      <!--
       <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
         <div class="page-content">
-          <div class="mdl-card mdl-shadow--2dp about-me-card">
-            <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--3-col">
-                <div class="mdl-card headshot"></div>
-              </div>
-              <div class="mdl-cell mdl-cell--9-col">
-                <div class="mdl-card__title">
-                  <h2 class="mdl-card__title-text">This Website!</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                  This is my site that you're on right now!
-                </div>
-              </div>
-            </div>
-          </div>
+          <div id=aboutMe></div>
         </div>
       </section>
-      <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+-->
+      <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
         <div class="page-content projects">
           <div id="projectCard"></div>
           <div id="taskingCard"></div>
         </div>
       </section>
-      <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+      <section class="mdl-layout__tab-panel" id="scroll-tab-2">
         <div class="page-content">
+          <div id="resumeCard"></div>
         </div>
       </section>
   </div>
@@ -78,6 +70,12 @@
     $(function() {
       $("#projectCard").load("elements/project-card.html");
       $("#taskingCard").load("elements/tasking-card.html");
+      $("#aboutMeCard").load("elements/about-me-card.html");
+      $("#resumeCard").load("elements/resume-card.html");
+    });
+
+    $("#emailFab").click(function() {
+      window.location = "mailto:jmoritz@udel.edu";
     });
 
   </script>

@@ -19,6 +19,9 @@
 }
 .page-content {
   margin-top: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 html,
 body {
@@ -35,6 +38,10 @@ body {
 .about-me-card {
   width: auto;
   margin: 20px;
+}
+#resumeCard {
+  margin: 15px;
+  width: 840px;
 }
 .headshot {
   background: url('http://placehold.it/200x200') center / cover;
