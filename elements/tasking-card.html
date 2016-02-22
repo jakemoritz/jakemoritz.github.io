@@ -1,11 +1,36 @@
-<div id="taskingCard" class="mdl-card mdl-shadow--2dp website-card projectCard">
+<div id="taskingCard" class="mdl-card mdl-shadow--2dp website-card">
   <div class="mdl-card__title">
     <h2 class="mdl-card__title-text"></h2>
   </div>
-  <div class="mdl-card__supporting-text">
-    A simple to-do list manager to use Google Tasks
+  <div id="TaskingST" class="mdl-card__supporting-text">
+    A simple to-do list manager to use Google Tasks.
   </div>
   <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Updates</a>
+    <a id="TaskingMI" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">More Info</a>
   </div>
 </div>
+<script>
+  $("#gpBadge").load("elements/tasking-moreinfo.html");
+
+  var TaskingMI = $("#TaskingMI");
+  var TaskingST = $("#TaskingST");
+
+  var taskingExpanded = false;
+  var taskingMoreInfo = "<div>stuff</div>";
+  var originalInfo = TaskingST.text();
+
+  $("#TaskingMI").on("click", (function() {
+    if (taskingExpanded == false) {
+      // show more info
+      taskingExpanded = true;
+      TaskingMI.text("Less Info");
+      TaskingST.text(originalInfo + "\n" + taskingMoreInfo);
+    } else {
+      // show less info
+      taskingExpanded = false;
+      TaskingMI.text("More Info");
+      TaskingST.text(originalInfo);
+    }
+  }));
+
+</script>

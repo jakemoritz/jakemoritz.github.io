@@ -14,9 +14,6 @@
   height: 250px;
   background-size: 100% 100%;
 }
-#taskingCard > mdl-card__title-text {
-  display: none;
-}
 .page-content {
   margin-top: 40px;
   align-items: center;
@@ -69,15 +66,4 @@ body {
 }
 .mdl-layout__tab-bar-container {
   overflow: visible;
-}
-.demo-card-wide.mdl-card {
-  width: 512px;
-}
-.demo-card-wide > .mdl-card__title {
-  color: #fff;
-  height: 176px;
-  background: url('../assets/demos/welcome_card.jpg') center / cover;
-}
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
 }
