@@ -24,13 +24,27 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title"><h4>Jake Moritz</h4></span>
-
+        <span class="mdl-layout-title">
+          <h3>Jake Moritz</h3>
+        </span>
+        <h6></h6>
       </div>
+      <!--
+<div class="mdl-layout__header-row">
+  <span class="mdl-layout-title">
+          <h6>Senior Computer Science major at the University of Delaware graduating in Spring 2016.</h6>
+        </span>
+</div>
+-->
+      <!--
+<div class="mdl-layout__header-row">
+
+</div>
+-->
       <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-        <a href="#scroll-tab-1" class="mdl-layout__tab is-active">About Me</a>
-        <a href="#scroll-tab-2" class="mdl-layout__tab">Projects</a>
-        <a href="#scroll-tab-3" class="mdl-layout__tab">Resume</a>
+        <!--        <a href="#scroll-tab-1" class="mdl-layout__tab is-active">About Me</a>-->
+        <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Projects</a>
+        <a href="#scroll-tab-2" class="mdl-layout__tab">Resume</a>
         <button id="emailFab" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp">
           <i class="material-icons">email</i>
         </button>
@@ -38,26 +52,33 @@
           Email
         </div>
       </div>
+
     </header>
+
     <main class="mdl-layout__content">
+      <!--
       <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
         <div class="page-content">
           <div id="aboutMeCard"></div>
         </div>
       </section>
-      <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-        <div class="page-content projects">
-          <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--6-col">
+-->
+      <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+        <div class="mdl-grid">
+          <div id="aboutMe" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+            <h3 class="mdl-card__supporting-text">   Senior Computer Science major at the University of Delaware graduating in Spring 2016.</h3>
+
+          </div>
+
+          <div class="page-content projects   mdl-cell mdl-cell--12-col">
+            <div class="mdl-grid">
               <div id="projectCard"></div>
-            </div>
-            <div class="mdl-cell mdl-cell--6-col">
               <div id="taskingCard"></div>
             </div>
           </div>
         </div>
       </section>
-      <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+      <section class="mdl-layout__tab-panel" id="scroll-tab-2">
         <div class="page-content">
           <div id="resumeCard"></div>
         </div>

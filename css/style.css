@@ -1,9 +1,5 @@
 .website-card.mdl-card {
   width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
 }
 #projectCard > .mdl-card__title {
   background: url('http://placehold.it/500x200') bottom;
@@ -46,11 +42,11 @@ body {
   width: 200px;
   /*  margin: 20px;*/
 }
+.mdl-grid {
+  margin: auto;
+}
 .mdl-layout__content {
   background-color: #FAFAFA;
-}
-.mdl-grid {
-  width: 100%;
 }
 .projectCard.mdl-button {
   position: absolute;
@@ -66,4 +62,21 @@ body {
 }
 .mdl-layout__tab-bar-container {
   overflow: visible;
+}
+h6 {
+  margin-left: 30px;
+}
+#aboutMe {
+  /*  width: 50%;*/
+  margin: auto;
+  text-align: center;
+  /*  height: 30px;*/
+  min-height: 0px;
+  /*  height: 10%;*/
+  width: 70%;
+  margin-top: 10px;
+}
+#aboutMe > .mdl-card__supporting-text {
+  padding: 0px;
+  width: auto;
 }
