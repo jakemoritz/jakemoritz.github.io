@@ -1,82 +1,116 @@
 .website-card.mdl-card {
-  width: 500px;
+    width: 500px;
 }
-#projectCard > .mdl-card__title {
-  background: url('http://placehold.it/500x200') bottom;
-  height: 200px;
+
+#projectCard>.mdl-card__title {
+    background: url('http://placehold.it/500x200') bottom;
+    height: 200px;
 }
-#taskingCard > .mdl-card__title {
-  background: url("../images/feature_graphic.png") bottom;
-  height: 250px;
-  background-size: 100% 100%;
+
+#taskingCard>.mdl-card__title {
+    background: url("../images/feature_graphic.png") bottom;
+    height: 250px;
+    background-size: 100% 100%;
 }
+
 .page-content {
-  margin-top: 40px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+    margin-top: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
+
+#github_image {
+    max-width: 100%;
+    max-height: 100%;
+    margin-right: 20px;
+}
+
+.square_image {
+    height: 50px;
+    width: 50px;
+}
+
+#nameHeader{
+    display:flex;
+    display: flex;
+    align-items: center;
+}
+
 html,
 body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
 }
+
 .mdl-layout__header-row {
-  padding-left: 40px;
-  margin: 10px;
+    padding-left: 40px;
+    margin: 10px;
 }
+
 .mdl-layout__tab-bar {
-  padding-left: 40px;
-  height: 100%;
+    padding-left: 40px;
+    height: 100%;
 }
+
 .about-me-card {
-  width: auto;
-  margin: 20px;
+    width: auto;
+    margin: 20px;
 }
+
 #resumeCard {
-  margin: 15px;
-  width: 840px;
+    margin: 15px;
+    width: 840px;
 }
+
 .headshot {
-  background: url('http://placehold.it/200x200') center / cover;
-  height: 200px;
-  width: 200px;
-  /*  margin: 20px;*/
+    background: url('http://placehold.it/200x200') center / cover;
+    height: 200px;
+    width: 200px;
+    /*  margin: 20px;*/
 }
+
 .mdl-grid {
-  margin: auto;
+    margin: auto;
 }
+
 .mdl-layout__content {
-  background-color: #FAFAFA;
+    background-color: #FAFAFA;
 }
+
 .projectCard.mdl-button {
-  position: absolute;
-  right: 40px;
-  top: 20px;
-  z-index: 100;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    z-index: 100;
 }
+
 .mdl-button--fab {
-  position: absolute;
-  right: 40px;
-  top: 20px;
-  z-index: 100;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    z-index: 100;
 }
+
 .mdl-layout__tab-bar-container {
-  overflow: visible;
+    overflow: visible;
 }
+
 h6 {
-  margin-left: 30px;
+    margin-left: 30px;
 }
+
 #aboutMe {
-  /*  width: 50%;*/
-  margin: auto;
-  text-align: center;
-  /*  height: 30px;*/
-  min-height: 0px;
-  /*  height: 10%;*/
-  width: 70%;
-  margin-top: 10px;
+    /*  width: 50%;*/
+    margin: auto;
+    text-align: center;
+    /*  height: 30px;*/
+    min-height: 0px;
+    /*  height: 10%;*/
+    width: 70%;
+    margin-top: 10px;
 }
-#aboutMe > .mdl-card__supporting-text {
-  padding: 0px;
-  width: auto;
+
+#aboutMe>.mdl-card__supporting-text {
+    padding: 0px;
+    width: auto;
 }
