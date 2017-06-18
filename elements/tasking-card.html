@@ -2,29 +2,45 @@
     <div class="mdl-card__title">
         <h2 class="mdl-card__title-text"></h2>
     </div>
-    <div id="TaskingST" class="mdl-card__supporting-text">A simple Android to-do list app.</div>
+    <div id="descContainer" class="mdl-card__supporting-text"> </div>
     <div class="mdl-card__actions mdl-card--border">
-        <a id="TaskingMI" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">More Info</a>
+        <a id="moreInfoButton" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">More Info</a>
         <a id="TaskingGitHub" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://github.com/jakemoritz/Tasking">GitHub</a>
     </div>
 </div>
 <script>
-    $("#gpBadge").load("elements/tasking-moreinfo.html");
-    var TaskingMI = $("#TaskingMI");
-    var TaskingST = $("#TaskingST");
+    var moreInfoButton = $("#moreInfoButton");
+    var descContainer = $("#descContainer");
     var taskingExpanded = false;
-    var taskingMoreInfo = "<div>stuff</div>";
-    var originalInfo = TaskingST.text();
-    $("#TaskingMI").on("click", (function () {
+
+    moreInfoButton.on("click", (function() {
         if (taskingExpanded == false) {
             // show more info
+
+            $.get("elements/tasking-lessinfo.html", function(data){
+                descContainer.contents().replaceWith(data);
+            });
+
+            moreInfoButton.text("Less Info");
+
             taskingExpanded = true;
-            TaskingMI.text("Less Info");
-            TaskingST.text(originalInfo + "\n" + taskingMoreInfo); }
-        else {
+        } else {
             // show less info
+
+            $.get("elements/tasking-moreinfo.html", function(data){
+                descContainer.contents().replaceWith(data);
+            });
+
+            moreInfoButton.text("More Info");
+
             taskingExpanded = false;
-            TaskingMI.text("More Info");
-            TaskingST.text(originalInfo); }
+        }
     }));
+
+    $(document).ready(function(){
+        $.get("elements/tasking-lessinfo.html", function(data){
+            descContainer.contents().replaceWith(data);
+        });
+    });
+    //# sourceURL=tasking-card.js
 </script>

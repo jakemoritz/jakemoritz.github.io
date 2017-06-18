@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="description" content="The showcase of projects worked on by Jake Moritz.">
         <!-- MDL imports -->
-        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-amber.min.css">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.brown-red.min.css" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -39,7 +39,8 @@
                 <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
                     <div class="mdl-grid">
                         <div id="aboutMe" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
-                            <h3 class="mdl-card__supporting-text"> Software developer with a focus on Android. Graduated from the University of Delaware in 2016 with a BS in Computer Science.</h3> </div>
+                            <h3 class="mdl-card__supporting-text"> Software developer with a focus on Android. Graduated from the University of Delaware in 2016 with a BS in Computer Science.</h3>
+                        </div>
                         <div class="page-content projects mdl-cell mdl-cell--12-col">
                             <div class="mdl-grid">
                                 <div class="projectCardOuter">
@@ -63,15 +64,16 @@
     </div>
 <script>
     // Custom element imports
-    $(function () {
+    $(function() {
         $("#projectCard").load("elements/project-card.html");
         $("#taskingCard").load("elements/tasking-card.html");
         $("#aboutMeCard").load("elements/about-me-card.html");
         $("#resumeCard").load("elements/resume-card.html");
     });
-    $("#emailFab").click(function () {
+    $("#emailFab").click(function() {
         window.location = "mailto:jmoritz@udel.edu";
     });
+    //# sourceURL=test.js
 </script>
 </body>
 
