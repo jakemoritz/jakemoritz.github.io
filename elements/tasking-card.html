@@ -14,11 +14,11 @@
     var taskingExpanded = false;
 
     moreInfoButton.on("click", (function() {
-        if (taskingExpanded == false) {
+        if (!taskingExpanded) {
             // show more info
 
-            $.get("elements/tasking-lessinfo.html", function(data){
-                descContainer.contents().replaceWith(data);
+            $.get("elements/tasking-moreinfo.html", function(data){
+                descContainer.html(data);
             });
 
             moreInfoButton.text("Less Info");
@@ -27,8 +27,8 @@
         } else {
             // show less info
 
-            $.get("elements/tasking-moreinfo.html", function(data){
-                descContainer.contents().replaceWith(data);
+            $.get("elements/tasking-lessinfo.html", function(data){
+                descContainer.html(data);
             });
 
             moreInfoButton.text("More Info");
@@ -39,8 +39,9 @@
 
     $(document).ready(function(){
         $.get("elements/tasking-lessinfo.html", function(data){
-            descContainer.contents().replaceWith(data);
+            descContainer.html(data);
         });
     });
+
     //# sourceURL=tasking-card.js
 </script>
