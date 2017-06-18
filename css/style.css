@@ -13,6 +13,12 @@
     background-size: 100% 100%;
 }
 
+#tasking-card>#desc-container {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .project-card-inner {
     margin-left: 10px;
     margin-right: 10px;
@@ -35,14 +41,28 @@ img {
     max-height: 100%;
 }
 
-.github-image {
+#github-image {
     height: auto;
     width: 50px;
     margin-right: 10px;
 }
 
+#gp-badge {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+#tasking-less-info {
+    align-items: center;
+}
+
+#tasking-more-info {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #name-header {
-    display: flex;
     align-items: center;
 }
 

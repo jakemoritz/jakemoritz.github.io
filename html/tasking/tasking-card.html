@@ -17,8 +17,8 @@
         if (!taskingExpanded) {
             // show more info
 
-            $.get("html/tasking/tasking-moreinfo.html", function(data){
-                descContainer.html(data);
+            $.get("html/tasking/tasking-more-info.html", function(data){
+                descContainer.append(data);
             });
 
             moreInfoButton.text("Less Info");
@@ -27,7 +27,7 @@
         } else {
             // show less info
 
-            $.get("html/tasking/tasking-lessinfo.html", function(data){
+            $.get("html/tasking/tasking-less-info.html", function(data){
                 descContainer.html(data);
             });
 
@@ -38,7 +38,7 @@
     }));
 
     $(document).ready(function(){
-        $.get("html/tasking/tasking-lessinfo.html", function(data){
+        $.get("html/tasking/tasking-less-info.html", function(data){
             descContainer.html(data);
         });
     });
