@@ -1,0 +1,47 @@
+<div id="tasking-card" class="mdl-card mdl-shadow--2dp project-card mdl-cell mdl-cell--6-col">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text"/>
+    </div>
+    <div id="desc-container" class="mdl-card__supporting-text"> </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <a id="more-info-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">More Info</a>
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://github.com/jakemoritz/Tasking">GitHub</a>
+    </div>
+</div>
+<script>
+    var moreInfoButton = $("#more-info-button");
+    var descContainer = $("#desc-container");
+    var taskingExpanded = false;
+
+    moreInfoButton.on("click", (function() {
+        if (!taskingExpanded) {
+            // show more info
+
+            $.get("html/tasking/tasking-moreinfo.html", function(data){
+                descContainer.html(data);
+            });
+
+            moreInfoButton.text("Less Info");
+
+            taskingExpanded = true;
+        } else {
+            // show less info
+
+            $.get("html/tasking/tasking-lessinfo.html", function(data){
+                descContainer.html(data);
+            });
+
+            moreInfoButton.text("More Info");
+
+            taskingExpanded = false;
+        }
+    }));
+
+    $(document).ready(function(){
+        $.get("html/tasking/tasking-lessinfo.html", function(data){
+            descContainer.html(data);
+        });
+    });
+
+    //# sourceURL=tasking-card.js
+</script>
