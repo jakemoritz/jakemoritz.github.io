@@ -1,6 +1,6 @@
 <div id="taskingCard" class="mdl-card mdl-shadow--2dp website-card mdl-cell mdl-cell--6-col">
     <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text"></h2>
+        <h2 class="mdl-card__title-text"/>
     </div>
     <div id="descContainer" class="mdl-card__supporting-text"> </div>
     <div class="mdl-card__actions mdl-card--border">
@@ -17,7 +17,7 @@
         if (!taskingExpanded) {
             // show more info
 
-            $.get("elements/tasking-moreinfo.html", function(data){
+            $.get("html/tasking/tasking-moreinfo.html", function(data){
                 descContainer.html(data);
             });
 
@@ -27,7 +27,7 @@
         } else {
             // show less info
 
-            $.get("elements/tasking-lessinfo.html", function(data){
+            $.get("html/tasking/tasking-lessinfo.html", function(data){
                 descContainer.html(data);
             });
 
@@ -38,7 +38,7 @@
     }));
 
     $(document).ready(function(){
-        $.get("elements/tasking-lessinfo.html", function(data){
+        $.get("html/tasking/tasking-lessinfo.html", function(data){
             descContainer.html(data);
         });
     });
