@@ -1,24 +1,24 @@
-.website-card.mdl-card {
+.project-card.mdl-card {
     width: 500px;
 }
 
-#projectCard>.mdl-card__title {
+#website-card>.mdl-card__title {
     background: url('http://placehold.it/500x200') bottom;
     height: 200px;
 }
 
-#taskingCard>.mdl-card__title {
-    background: url("../images/feature_graphic.png") bottom;
+#tasking-card>.mdl-card__title {
+    background: url("../images/tasking/tasking_banner.png") bottom;
     height: 250px;
     background-size: 100% 100%;
 }
 
-.projectCardInner {
+.project-card-inner {
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.projectCardOuter {
+.project-card-outer {
     margin-left: auto;
     margin-right: auto;
 }
@@ -30,18 +30,18 @@
     justify-content: center;
 }
 
-#github_image {
+#github-image {
     max-width: 100%;
     max-height: 100%;
 }
 
-.square_image {
+.square-image {
     height: 50px;
     width: 50px;
     margin-right: 10px;
 }
 
-#nameHeader {
+#name-header {
     display: flex;
     align-items: center;
 }
@@ -86,7 +86,7 @@ body {
     overflow: visible;
 }
 
-#aboutMe {
+#about-me {
     /*  width: 50%;*/
     margin: auto;
     text-align: center;
@@ -99,7 +99,7 @@ body {
     padding-right: 10px;
 }
 
-#aboutMe>.mdl-card__supporting-text {
+#about-me>.mdl-card__supporting-text {
     padding: 0px;
     width: auto;
 }

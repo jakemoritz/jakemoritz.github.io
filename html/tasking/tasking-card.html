@@ -1,16 +1,16 @@
-<div id="taskingCard" class="mdl-card mdl-shadow--2dp website-card mdl-cell mdl-cell--6-col">
+<div id="tasking-card" class="mdl-card mdl-shadow--2dp project-card mdl-cell mdl-cell--6-col">
     <div class="mdl-card__title">
         <h2 class="mdl-card__title-text"/>
     </div>
-    <div id="descContainer" class="mdl-card__supporting-text"> </div>
+    <div id="desc-container" class="mdl-card__supporting-text"> </div>
     <div class="mdl-card__actions mdl-card--border">
-        <a id="moreInfoButton" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">More Info</a>
-        <a id="TaskingGitHub" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://github.com/jakemoritz/Tasking">GitHub</a>
+        <a id="more-info-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">More Info</a>
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://github.com/jakemoritz/Tasking">GitHub</a>
     </div>
 </div>
 <script>
-    var moreInfoButton = $("#moreInfoButton");
-    var descContainer = $("#descContainer");
+    var moreInfoButton = $("#more-info-button");
+    var descContainer = $("#desc-container");
     var taskingExpanded = false;
 
     moreInfoButton.on("click", (function() {
