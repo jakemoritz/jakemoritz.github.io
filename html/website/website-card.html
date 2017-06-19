@@ -1,8 +1,56 @@
 <div id="website-card" class="mdl-card mdl-shadow--2dp project-card mdl-cell mdl-cell--6-col">
     <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">This Website!</h2>
+        <h2 id="website-card-title" class="mdl-card__title-text">This Website!</h2>
     </div>
-    <div class="mdl-card__supporting-text">
-        This is my site that you're on right now!
+    <div id="desc-container-website" class="mdl-card__supporting-text"> </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <a id="more-info-button-website" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">More Info</a>
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://github.com/jakemoritz/jakemoritz.github.io">GitHub</a>
     </div>
 </div>
+<script>
+    var DescriptionModule = (function(){
+        var moreInfoButton = $("#more-info-button-website");
+        var descContainer = $("#desc-container-website");
+        var expanded = false;
+
+        moreInfoButton.on("click", (function() {
+            if (!expanded) {
+                // show more info
+
+                $.get("html/website/website-more-info.html", function(data){
+                    descContainer.append(data);
+                });
+
+                moreInfoButton.text("Less Info");
+
+                expanded = true;
+            } else {
+                // show less info
+
+                $.get("html/website/website-less-info.html", function(data){
+                    descContainer.html(data);
+                });
+
+                moreInfoButton.text("More Info");
+
+                expanded = false;
+            }
+        }));
+
+        // Public methods
+        return {
+            setDefaultDescription: function(){
+                $(document).ready(function(){
+                    $.get("html/website/website-less-info.html", function(data){
+                        descContainer.html(data);
+                    });
+                });  
+            }
+        }
+
+    })();
+
+    DescriptionModule.setDefaultDescription();
+    //# sourceURL=website-card.js
+</script>

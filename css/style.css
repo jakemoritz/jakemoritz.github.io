@@ -3,8 +3,9 @@
 }
 
 #website-card>.mdl-card__title {
-    background: url('http://placehold.it/500x200') bottom;
-    height: 200px;
+    background: url("../images/website/website_banner.png") bottom;
+    height: 250px;
+    background-size: 100% 100%;
 }
 
 #tasking-card>.mdl-card__title {
@@ -13,7 +14,7 @@
     background-size: 100% 100%;
 }
 
-#tasking-card>#desc-container {
+#tasking-card>#desc-container-tasking {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
@@ -34,6 +35,10 @@
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+#website-card-title {
+    color: #FFFFFF;
 }
 
 img {
