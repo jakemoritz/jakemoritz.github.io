@@ -41,10 +41,6 @@
     color: #FFFFFF;
 }
 
-main, main>section, main>section.page-content {
-    height: 100%;
-}
-
 #resume-tab {
     height: 100%;
     width: 100%;

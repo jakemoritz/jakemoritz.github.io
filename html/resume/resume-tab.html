@@ -1,3 +1,13 @@
 <div id="resume-tab" class="mdl-card mdl-shadow--2dp">
-    <iframe src='https://view.officeapps.live.com/op/view.aspx?src=http%3A%2F%2Fwww.jakemoritz.me%2Fdocuments%2FJake_Moritz_Resume.docx' height='1500' frameborder='0'/>
+    <iframe src='https://view.officeapps.live.com/op/view.aspx?src=http%3A%2F%2Fwww.jakemoritz.me%2Fdocuments%2FJake_Moritz_Resume.docx' frameborder='0'/>
 </div>
+<script>
+    $(window).resize(function() {
+        $("iframe").height($(window).height() - $("header").height() - parseInt($("section#scroll-tab-2>div.page-content").css('margin-top')));
+    });
+    $(document).ready(function(){
+        $("iframe").height($(window).height() - $("header").height() - parseInt($("section#scroll-tab-2>div.page-content").css('margin-top')));
+    });
+
+    //# sourceURL=resume-tab.js
+</script>
