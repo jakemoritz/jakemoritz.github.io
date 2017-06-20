@@ -1,6 +1,5 @@
 # My personal website
-
-> This is my personal website, serving as a portfolio for my projects. 
+This is my personal website, serving as a portfolio for my projects. 
 
 ## Built With
 - [Material Design Lite](https://getmdl.io/) - Web framework
