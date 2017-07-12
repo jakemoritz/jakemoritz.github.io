@@ -20,16 +20,15 @@
     background-size: 100% 100%;
 }
 
-#tasking-card>#desc-container-tasking {
+.desc-container {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
 }
 
-#anime-buzz-card>#desc-container-anime-buzz {
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
+.desc-container>.mdl-grid {
+    align-items: center;
+    text-align: center;
 }
 
 .project-card-inner {
@@ -73,25 +72,6 @@ img {
     width: 200px;
     height: auto;
     display: block;
-}
-
-#tasking-less-info {
-    align-items: center;
-}
-
-#tasking-more-info {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#anime-buzz-less-info {
-    align-items: center;
-    text-align: center;
-}
-
-#anime-buzz-more-info {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #name-header {
