@@ -14,7 +14,19 @@
     background-size: 100% 100%;
 }
 
+#anime-buzz-card>.mdl-card__title {
+    background: url("../images/anime-buzz/anime_buzz_banner.png") bottom;
+    height: 250px;
+    background-size: 100% 100%;
+}
+
 #tasking-card>#desc-container-tasking {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#anime-buzz-card>#desc-container-anime-buzz {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
@@ -68,6 +80,16 @@ img {
 }
 
 #tasking-more-info {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#anime-buzz-less-info {
+    align-items: center;
+    text-align: center;
+}
+
+#anime-buzz-more-info {
     margin-left: auto;
     margin-right: auto;
 }

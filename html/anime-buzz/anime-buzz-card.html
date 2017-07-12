@@ -1,0 +1,54 @@
+<div id="anime-buzz-card" class="mdl-card mdl-shadow--2dp project-card mdl-cell mdl-cell--6-col">
+    <div class="mdl-card__title"/>
+    <div id="desc-container-anime-buzz" class="mdl-card__supporting-text"> </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <a id="more-info-button-anime-buzz" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">More Info</a>
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://github.com/jakemoritz/Anime-Buzz">GitHub</a>
+    </div>
+</div>
+<script>
+    var DescriptionModule = (function () {
+        var moreInfoButton = $("#more-info-button-anime-buzz");
+        var descContainer = $("#desc-container-anime-buzz");
+        var expanded = false;
+
+        moreInfoButton.on("click", (function() {
+            if (!expanded) {
+                // show more info
+
+                $.get("html/anime-buzz/anime-buzz-more-info.html", function(data){
+                    descContainer.append(data);
+                });
+
+                moreInfoButton.text("Less Info");
+
+                expanded = true;
+            } else {
+                // show less info
+
+                $.get("html/anime-buzz/anime-buzz-less-info.html", function(data){
+                    descContainer.html(data);
+                });
+
+                moreInfoButton.text("More Info");
+
+                expanded = false;
+            }
+        }));
+
+        // Public methods
+        return {
+            setDefaultDescription: function(){
+                $(document).ready(function(){
+                    $.get("html/anime-buzz/anime-buzz-less-info.html", function(data){
+                        descContainer.html(data);
+                    });
+                });
+            }
+        }
+    })();
+
+    DescriptionModule.setDefaultDescription();
+
+    //# sourceURL=anime-buzz-card.js
+</script>
